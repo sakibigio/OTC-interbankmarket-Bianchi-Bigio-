@@ -1,0 +1,56 @@
+# MATLAB
+*.asv
+*.m~
+*.mex*
+*.slxc
+slprj/
+*.autosave
+
+# Output files
+output/figures/*.pdf
+output/figures/*.eps
+output/figures/*.png
+output/figures/*.jpg
+output/*.mat
+output/*.txt
+*.pdf
+*.eps
+
+# Keep directory structure but ignore contents
+output/**/*
+!output/.gitkeep
+!output/figures/.gitkeep
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# Personal configuration
+config_local.m
+*_local.m
+
+# Overleaf sync (if using Plot_Migration.m)
+# Uncomment if you don't want to track Dropbox/Overleaf paths
+# Plot_Migration.m
