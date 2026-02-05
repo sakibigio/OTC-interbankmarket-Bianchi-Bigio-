@@ -242,7 +242,7 @@ ylabel('$\theta_{\tau}$')
 linestyleorder("mixedstyles")
 colororder(newcolors);
 line([T_max T_max],[0 theta_o], 'LineStyle',':','Color','k');
-text(T_max-0.02,theta_o/2.5,'Stop Time $T(\theta_0,\bar{\lambda})$ (p=0)', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(T_max-0.02,theta_o/3,'Stop Time $T(\theta_0,\bar{\lambda})$ (p=0)', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
 if printit==1
     orient landscape;
     % saveas(gcf, 'Dist_example', 'pdf')
@@ -834,11 +834,11 @@ interbankplot_addstaticrate;
 % text(ln_THETA(end-300),(1-matchtech.eta)*delta_r-6,'$(1-\eta)(\mathbf{r^{w}-r^{m}})$','FontSize',16);
 line([ln_THETA(loc_min) ln_THETA(loc_min)], [0 delta_r],'Color','k','LineStyle',verticalstyle,'LineWidth',verticalwidth);
 line([ln_THETA(loc_max) ln_THETA(loc_max)], [0 delta_r],'Color','k','LineStyle',verticalstyle,'LineWidth',verticalwidth);
-text(ln_THETA(loc_min)-0.02,delta_r/2,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
-text(ln_THETA(loc_max)-0.02,delta_r/2,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(ln_THETA(loc_min)-0.02,0,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(ln_THETA(loc_max)-0.02,0,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
 ylabel('\textbf{BPS}');
 grid on;
-legend('$r^{f}$', '$\chi^-$', '$\chi^+$', 'Interpreter','Latex', 'Location', 'SouthEast','Box','Off','AutoUpdate','off');
+legend('$r^{f}$', '$\chi^-$', '$\chi^+$', 'Interpreter','Latex', 'Location', 'NorthWest','Box','Off','AutoUpdate','off');
 hold on; 
 if printit==1
     orient landscape;
@@ -878,8 +878,8 @@ interbankplot_addstaticrate;
 line([ln_THETA(1) ln_THETA(end)], 0*[max_thetabar max_thetabar],'Color','k','LineStyle','--','LineWidth',1);
 line([ln_THETA(loc_min) ln_THETA(loc_min)], [min_thetabar max_thetabar],'Color','k','LineStyle',':','LineWidth',2);
 line([ln_THETA(loc_max) ln_THETA(loc_max)], [min_thetabar max_thetabar],'Color','k','LineStyle',':','LineWidth',2);
-text(ln_THETA(loc_min)-0.02,-5,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
-text(ln_THETA(loc_max)-0.02,-5,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(ln_THETA(loc_min)-0.02,0,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(ln_THETA(loc_max)-0.02,0,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
 hold on; 
 text(ln_THETA(5),delta_r-6,'$\mathbf{r^{w}-r^{m}}$','FontSize',16);
 xlabel('$\mathbf{ln(\theta_0)}$')
@@ -915,8 +915,8 @@ plot(ln_THETA(index_aux),max(RF_t(:,index_aux),[],1)-min(RF_t(:,index_aux),[],1)
 interbankplot_addcorridortheta;
 line([ln_THETA(loc_min) ln_THETA(loc_min)], [0 delta_r],'Color','k','LineStyle',':','LineWidth',2);
 line([ln_THETA(loc_max) ln_THETA(loc_max)], [0 delta_r],'Color','k','LineStyle',':','LineWidth',2);
-text(ln_THETA(loc_min)-0.02,40,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
-text(ln_THETA(loc_max)-0.02,40,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90); 
+text(ln_THETA(loc_min)-0.02,0,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(ln_THETA(loc_max)-0.02,0,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90); 
 plot(ln_THETA(1:index_aux(1)-1),0*ln_THETA(1:index_aux(1)-1),'color',newcolors(1,:),'LineWidth', 3);
 plot(ln_THETA(index_aux(end)+1:end),0*ln_THETA(index_aux(end)+1:end),'color',newcolors(1,:),'LineWidth', 3);
 ylabel('Dispersion Q (\textbf{BPS})'); 
@@ -940,8 +940,8 @@ linestyleorder("mixedstyles")
 colororder(newcolors); grid on;
 line([ln_THETA(loc_min) ln_THETA(loc_min)], [0 maxvol],'Color','k','LineStyle',':','LineWidth',2);
 line([ln_THETA(loc_max) ln_THETA(loc_max)], [0 maxvol],'Color','k','LineStyle',':','LineWidth',2);
-text(ln_THETA(loc_min)-0.02,maxvol/2.5,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
-text(ln_THETA(loc_max)-0.02,maxvol/2.5,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90); 
+text(ln_THETA(loc_min)-0.02,0,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(ln_THETA(loc_max)-0.02,0,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90); 
 hold on; 
 line([ln_THETA(1) ln_THETA(end)], [maxvol maxvol],'Color','k','LineWidth',1);
 line([ln_THETA(1) ln_THETA(end)], [0 0],'Color','k','LineStyle','-','LineWidth',1);
@@ -991,10 +991,10 @@ colororder(newcolors);
 interbankplot_addcorridortheta;
 line([ln_THETA(loc_min) ln_THETA(loc_min)], [0 delta_r],'Color','k','LineStyle',':','LineWidth',2);
 line([ln_THETA(loc_max) ln_THETA(loc_max)], [0 delta_r],'Color','k','LineStyle',':','LineWidth',2);
-text(ln_THETA(loc_min)-0.02,delta_r/2,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
-text(ln_THETA(loc_max)-0.02,delta_r/2,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90); 
+text(ln_THETA(loc_min)-0.02,0,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(ln_THETA(loc_max)-0.02,0,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90); 
 ylabel('\textbf{BPS}');
-legend('$\chi^{-} (\eta=0.25)$','$\chi^{-} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.25)$', '$\chi^{+} (\eta=0.5)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'SouthEast','Box','Off','AutoUpdate','off');
+legend('$\chi^{-} (\eta=0.25)$','$\chi^{-} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.25)$', '$\chi^{+} (\eta=0.5)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'NorthWest','Box','Off','AutoUpdate','off');
 if printit==1
     orient landscape;
     % saveas(gcf, 'Dist_example', 'pdf')
@@ -1036,7 +1036,7 @@ linestyleorder("mixedstyles")
 colororder(newcolors); grid on;
 interbankplot_addcorridorlambda;
 line([LAMBDA_vec(loc_max+1) LAMBDA_vec(loc_max+1)], [0 delta_r],'Color','k','LineStyle',':','LineWidth',2);
-text(LAMBDA_vec(loc_max+1)-0.02,delta_r/3,'Walrasian efficiency threshold $\bar{\lambda}^{\star}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(LAMBDA_vec(loc_max+1)-0.02,0,'Walrasian efficiency threshold $\bar{\lambda}^{\star}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
 grid on; 
 if printit==1
     orient landscape;
@@ -1078,7 +1078,7 @@ plot(LAMBDA_vec(loc_max+1:end),0*LAMBDA_vec(loc_max+1:end));
 colororder(newcolors); grid on;
 interbankplot_addcorridorlambda;
 line([LAMBDA_vec(loc_max+1) LAMBDA_vec(loc_max+1)], [0 delta_r],'Color','k','LineStyle',':','LineWidth',2);
-text(LAMBDA_vec(loc_max+1)-0.02,delta_r/3,'Walrasian efficiency threshold $\bar{\lambda}^{\star}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(LAMBDA_vec(loc_max+1)-0.02,0,'Walrasian efficiency threshold $\bar{\lambda}^{\star}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
 ylabel('Dispersion Q (\textbf{BPS})'); 
 if printit==1
     orient landscape;
@@ -1098,7 +1098,7 @@ colororder(newcolors); grid on;
 line([LAMBDA_vec(1) LAMBDA_vec(end)], [max_vol max_vol],'Color','k','LineWidth',1);
 line([LAMBDA_vec(1) LAMBDA_vec(end)], [0 0],'Color','k','LineStyle','-','LineWidth',1);
 line([LAMBDA_vec(loc_max+1) LAMBDA_vec(loc_max+1)], [0 max_vol],'Color','k','LineStyle',':','LineWidth',2);
-text(LAMBDA_vec(loc_max+1)-0.02,max_vol/4,'Walrasian efficiency threshold $\bar{\lambda}^{\star}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
+text(LAMBDA_vec(loc_max+1)-0.02,0,'Walrasian efficiency threshold $\bar{\lambda}^{\star}$', 'Interpreter', 'Latex', 'FontSize',16,'Rotation',90);
 grid on;
 axis([LAMBDA_vec(1) LAMBDA_vec(end) 0 max_vol]); 
 if printit==1
@@ -1259,7 +1259,7 @@ interbankplot_addcorridortheta;
 % text(ln_THETA(end-300),(1-matchtech.eta)*delta_r-6,'$(1-\eta)*(\mathbf{r^{w}-r^{m}})$','FontSize',16);
 interbankplot_addstaticrate;
 ylabel('\textbf{BPS}');
-legend('$r^{f}$', '$\chi^-$', '$\chi^+$', 'Interpreter','Latex', 'Location', 'SouthEast','Box','Off','AutoUpdate','off');
+legend('$r^{f}$', '$\chi^-$', '$\chi^+$', 'Interpreter','Latex', 'Location', 'NorthWest','Box','Off','AutoUpdate','off');
 if printit==1
     orient landscape;
     % saveas(gcf, 'Dist_example', 'pdf')
@@ -1343,7 +1343,7 @@ colororder(newcolors); grid on;
 linestyleorder("mixedstyles");
 interbankplot_addcorridortheta;
 ylabel('\textbf{BPS}');
-legend('$\chi^{-} (\eta=0.25)$','$\chi^{-} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.25)$', '$\chi^{+} (\eta=0.5)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'East','Box','Off','AutoUpdate','off');
+legend('$\chi^{-} (\eta=0.25)$','$\chi^{-} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.25)$', '$\chi^{+} (\eta=0.5)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'NorthWest','Box','Off','AutoUpdate','off');
 if printit==1
     orient landscape;
     % saveas(gcf, 'Dist_example', 'pdf')
