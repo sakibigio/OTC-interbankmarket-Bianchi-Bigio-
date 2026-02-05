@@ -1,6 +1,6 @@
 % === Auto-sync figures to Overleaf ===
 % Source: repository output directory
-repo_root = fileparts(fileparts(pwd));
+repo_root = fileparts(pwd);
 src = fullfile(repo_root, 'output', 'figures');
 dst = '/Users/sakiclaudia/Library/CloudStorage/Dropbox/Apps/Overleaf/JET_Portfolio_ConvenienceYield/NewCode/Figures/';
 
