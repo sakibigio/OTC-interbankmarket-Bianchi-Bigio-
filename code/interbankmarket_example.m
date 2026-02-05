@@ -127,7 +127,7 @@ theta0_top =  log(1/0.125);
 
 %% Comparison Various Matching Functions - Matching Rates
 p_vec=[0 -1/4 -1 -2 -inf]; % p=(rho_vec-1)/(rho_vec);
-legendCell = {'$p=0$ (Cobb-Douglas)', '$p=-1/4$', '$p=-1$ (Harmonic Mean)', '$p=-2$', '$p=\infty$ (Leontief)'};
+legendCell = {'$p=0$ (Cobb-Douglas)', '$p=-1/4$', '$p=-1$ (Harmonic Mean)', '$p=-2$', '$p=-\infty$ (Leontief)'};
 rho_vec=1./(1-p_vec);
 N_rho=length(p_vec);
 ltheta_g_mat=zeros(N_rho,N_theta);
@@ -994,7 +994,7 @@ line([ln_THETA(loc_max) ln_THETA(loc_max)], [0 delta_r],'Color','k','LineStyle',
 text(ln_THETA(loc_min)-0.02,delta_r/2,'Walrasian Threshold $\theta^{+}$', 'Interpreter', 'Latex', 'FontSize',12,'Rotation',90);
 text(ln_THETA(loc_max)-0.02,delta_r/2,'Walrasian Threshold $\theta^{-}$', 'Interpreter', 'Latex', 'FontSize',12,'Rotation',90); 
 ylabel('\textbf{BPS}');
-legend('$\chi^{-} (\eta=0.25)$','$\chi^{+} (\eta=0.25)$', '$\chi^{-} (\eta=0.5)$','$\chi^{+} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'SouthEast','Box','Off','AutoUpdate','off');
+legend('$\chi^{-} (\eta=0.25)$','$\chi^{-} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.25)$', '$\chi^{+} (\eta=0.5)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'SouthEast','Box','Off','AutoUpdate','off');
 if printit==1
     orient landscape;
     % saveas(gcf, 'Dist_example', 'pdf')
@@ -1343,7 +1343,7 @@ colororder(newcolors); grid on;
 linestyleorder("mixedstyles");
 interbankplot_addcorridortheta;
 ylabel('\textbf{BPS}');
-legend('$\chi^{-} (\eta=0.25)$','$\chi^{+} (\eta=0.25)$', '$\chi^{-} (\eta=0.5)$','$\chi^{+} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'East','Box','Off','AutoUpdate','off');
+legend('$\chi^{-} (\eta=0.25)$','$\chi^{-} (\eta=0.5)$', '$\chi^{-} (\eta=0.75)$','$\chi^{+} (\eta=0.25)$', '$\chi^{+} (\eta=0.5)$','$\chi^{+} (\eta=0.75)$', 'Interpreter','Latex', 'Location', 'East','Box','Off','AutoUpdate','off');
 if printit==1
     orient landscape;
     % saveas(gcf, 'Dist_example', 'pdf')
@@ -1373,7 +1373,7 @@ figure('Name',"Prices Lambda (Loentief)")
 plot(LAMBDA_vec,CHIm(:)); hold on;
 plot(LAMBDA_vec,RF(:)); 
 plot(LAMBDA_vec,CHIp(:));
-legend('$\chi^{-}$','$\chi^{+}$','$\bar{r}^f$','Box','off','Location','SouthEast','AutoUpdate','Off');
+legend('$\chi^{-}$','$\bar{r}^f$','$\chi^{+}$','Box','off','Location','SouthEast','AutoUpdate','Off');
 ylabel('\textbf{BPS}'); 
 xlabel('$\mathbf{\lambda}$');
 grid on;
